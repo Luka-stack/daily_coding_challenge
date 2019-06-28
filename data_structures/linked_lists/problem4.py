@@ -41,7 +41,7 @@ def main():
 	A = Node(3, Node(7, equal))
 	B = Node(99, Node(1, equal))
 
-	assert (find_intersect(A, B)), equal
+	assert find_intersect(A, B) is equal
 
 if __name__=='__main__':
 	main()
