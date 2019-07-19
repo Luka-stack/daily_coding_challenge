@@ -18,7 +18,7 @@ def rearrange_nodes(node):
 
 		even = not even
 		cur = cur.next
-
+		
 	return node
 
 # keeping current and prev node in memory
@@ -54,7 +54,8 @@ def show_list(node):
 
 def main():
 	root = Node(1, Node(2, Node(3, Node(4, Node(5)))))
-	root_2 = Node(2, Node(1, Node(3, Node(9, Node(2)))))
+	root_2 = Node(1, Node(2, Node(3, Node(4, Node(5)))))
+	#root_2 = Node(2, Node(1, Node(3, Node(9, Node(2)))))
 
 	print("Base: ")
 	show_list(root)

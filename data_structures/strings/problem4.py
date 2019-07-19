@@ -4,7 +4,7 @@ manipulated by taking one of the first k letters and moving it to the end of the
 Write a program to determine the lexicographically smallest string that can be created after
 an unlimited number of moves.
 
-For example. suppose we are gicen the string daily and k = 1. The best we can create
+For example. suppose we are given the string daily and k = 1. The best we can create
 in this case is ailyd
 """
 
