@@ -39,14 +39,30 @@ class Node():
 		self.right = right
 
 
+def decode_tree(root):
+	result = []
+
+	if root:
+		result.append(root.data)
+		result += decode_tree(root.left)
+		result += decode_tree(root.right)
+
+	return result
+
+
 def main():
 	tree = Node('*', Node('+', Node(3), Node(2)), Node('+', Node(4), Node(5)))
-	tree_three = Node('/', 
+	tree_two = Node('/', 
 		Node('*', Node('+', Node(1), Node(2)), Node('+', Node(3), Node(4))), 
 		Node('*', Node('-', Node(5), Node(6)), Node('-', Node(7), Node(8))))
 
+	print('First Tree; result:', evaluate(tree))
+	print(decode_tree(tree))
 	assert evaluate(tree) == 45
-	assert evaluate(tree_three) == 21.0
+
+	print('\nSecond Tree; result:', evaluate(tree_two))
+	print(decode_tree(tree_two))
+	assert evaluate(tree_two) == 21.0
 
 
 if __name__ == '__main__':
